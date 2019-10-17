@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {SafeAreaView, TouchableOpacity} from 'react-native';
+import {SafeAreaView} from 'react-native';
 import Lock from './lock.svg';
 
 const App = () => {
@@ -13,10 +13,8 @@ const App = () => {
   }, []);
 
   return (
-    <SafeAreaView>
-      <TouchableOpacity>
-        <Lock color={state ? '#000000' : '#0000FF'} width={50} height={50} />
-      </TouchableOpacity>
+    <SafeAreaView style={{flex: 1, backgroundColor: '#CCCCCC'}}>
+      <Lock color={state ? '#000000' : '#0000FF'} width={50} height={50} />
     </SafeAreaView>
   );
 };
